@@ -1,1 +1,268 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$etp-primary: mat.define-palette(mat.$indigo-palette);
+$etp-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$etp-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$etp-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $etp-primary,
+      accent: $etp-accent,
+      warn: $etp-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($etp-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:ital@0;1&display=swap");
+
+//font familys
+$pt_sans: "PT Sans", sans-serif;
+$playfair_display: "Playfair Display", serif;
+
+//font weights
+$regular_weight: 400;
+$bold: 700;
+$italic: italic;
+
+//font sizes
+$small_font: 0.625rem; //10px;
+$regular_font: 0.75rem; //12px
+$medium_font: 0.875rem; //14px
+
+$regular_font: 1rem; //16px
+$xlarge_font: 1.125rem; //18px
+
+//font colors
+$blackClr: #000;
+$grayClr: #797979;
+
+//bg colors
+$whiteBg: #fff;
+// $mainBg: #f2f2f2;
+$mainBg: #e8edf2;
+$grayBg: #f5f5f4;
+$bg1: rgb(18, 18, 18);
+$redBg: #de3241;
+
+html,
+body {
+  font-family: $pt_sans;
+  font-size: $regular_font;
+  line-height: 1.45em;
+  font-weight: $regular_weight;
+  color: $grayClr;
+  background: $mainBg;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+.clearRow {
+  clear: both;
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+.cmnBox {
+  box-shadow: 0 2px 4px #e0e0e0;
+  border-radius: 5px;
+  padding: 20px 10px;
+  background: #fff;
+  position: relative;
+}
+
+.cmnBox h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.cmnBtn {
+  margin: 0px 6px;
+  border-radius: 5px;
+  padding: 9px 20px;
+  font-size: 14px;
+  line-height: 1.5rem;
+  border: #f2f2f2;
+  cursor: pointer;
+  background: #0080fe;
+  color: #fff;
+  height: 43px;
+}
+
+.cmnBtn:hover {
+  background: #dddddd;
+  border: #dddddd;
+  color: $blackClr;
+}
+
+.cmnBtn:focus,
+.close:focus,
+button,
+select {
+  outline: none !important;
+}
+
+.addIcon,
+.addWhiteIcon {
+  position: relative;
+  padding-left: 30px;
+}
+
+.addIcon:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  content: "";
+  background: url(/assets/images/plus-small.svg) no-repeat;
+  background-size: cover;
+}
+
+.addWhiteIcon:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  content: "";
+  background: url(/assets/images/plus-white-icon.svg) no-repeat;
+  background-size: cover;
+}
+
+.saveBtn,
+.cmnBtn:hover.saveBtn {
+  background: #0080fe !important;
+  color: #fff !important;
+}
+
+.cancelBtn,
+.cmnBtn:hover.cancelBtn {
+  background: #fff;
+  border: 1px solid #0080fe !important;
+  color: #0080fe !important;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 1rem;
+  color: #525252;
+  margin-bottom: 0;
+}
+
+.form-control {
+  border-color: #d8d8d8;
+  font-size: 1rem;
+  color: #525252;
+  height: 45px;
+  display: inline-block;
+}
+
+input:focus,
+.form-control:focus,
+.input_datepicker:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #d8d8d8 !important;
+}
+
+.summeryMain {
+  box-shadow: 0 2px 4px #e0e0e0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  padding: 25px 20px 20px 25px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+}
+
+.summeryMain h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0em;
+}
+
+.summeryMain h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.summeryMain p {
+  margin-bottom: 0;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.cdk-overlay-container {
+  z-index: 9999;
+}
+
+.tableList {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tableList th,
+.tableList td {
+  padding: 0.75rem 0.5rem;
+}
+
+.tableList thead th {
+  background-color: #d4e4f3;
+  color: #0080fe;
+}
+
+.tableList tbody th,
+.tableList tbody td {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.modal-header {
+  background-color: #f2f2f2;
+  color: #4a4a4a;
+}
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.modal-footer {
+  justify-content: center;
+}

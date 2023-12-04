@@ -1,0 +1,59 @@
+<div class="row m-auto cmnBox">
+    <div class="col-md-7 headingTab">
+        <h2>Platform Details</h2>
+    </div>
+    <button class="cmnBtn addWhiteIcon ms-auto" (click)="openPlatformsModal('New')">Create Platforms</button>
+</div>
+
+<div class="clearRow mb-3"></div>
+
+<div class="row m-auto">
+    <div class="col-md-4 ps-0">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>Platforms</h3>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>Environments</h3>
+        </div>
+    </div>
+
+    <div class="col-md-4 pe-0">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>AIT's</h3>
+        </div>
+    </div>
+</div>
+<div class="clearRow mb-3"></div>
+
+<div class="row m-auto">
+    <table class="table table-striped tableList">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Platform Code</th>
+                <th scope="col">Platform Name</th>
+                <th scope="col">Environments</th>
+                <th scope="col">AlTs</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (tableData of platformDetails; track tableData.name; let i = $index) {
+            <tr>
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ tableData.code | number }}
+
+                </td>
+                <td>{{ tableData.name }}</td>
+                <td>{{ tableData.environments }}</td>
+                <td>{{ tableData.alts }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

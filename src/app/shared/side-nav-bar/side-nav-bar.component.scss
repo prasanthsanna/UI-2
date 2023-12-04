@@ -1,0 +1,20 @@
+.menuBg {
+  background: #fff;
+  height: 100vh;
+}
+.menuList {
+  font-size: 1rem;
+  padding: 15px 10px;
+  color: black;
+  cursor: pointer;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: 3px solid transparent;
+}
+
+.menuList:hover,
+.menuList.active {
+  background: rgb(226, 224, 224);
+  color: #0080fe;
+  border-color: #0080fe;
+}

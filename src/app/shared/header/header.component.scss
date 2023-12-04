@@ -1,0 +1,53 @@
+.headerBg {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #0080fe;
+}
+
+.logo {
+  width: 50%;
+}
+
+.logoTextx {
+  color: #fff;
+  font-weight: 700;
+}
+
+.logout {
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+
+.logout a {
+  font-size: 14px;
+  color: white;
+}
+
+.headTop {
+  font-size: 14px;
+  padding-top: 2px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profileIcon {
+  padding-left: 35px !important;
+  color: rgba(255, 255, 255, 1) !important;
+  line-height: 40px;
+  position: relative;
+}
+
+.profileIcon:before {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  content: "";
+  background: url(/assets/images/profile.png) no-repeat;
+}
+
+.profileIcon:after {
+  display: none;
+}
