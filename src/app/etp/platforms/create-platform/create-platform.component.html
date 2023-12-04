@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <h4 class="modal-title"> Create {{ title }} Platforms </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <div class="row m-auto">
+        <div class="col-8">
+            <div class="form-group">
+                <label>Platform Code</label>
+                <input type="text" class="form-control" placeholder="Enter Platform Code" />
+            </div>
+            <div class="form-group">
+                <label>Platform Name</label>
+                <input type="text" class="form-control" placeholder="Enter Platform Name" />
+            </div>
+            <div class="form-group">
+                <label>Environments</label>
+                <mat-form-field class="select-field">
+                    <mat-select [(value)]="envSelected">
+                        @for (env of envOptions; track env) {
+                        <mat-option [value]="env.value">{{env.viewValue}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <label>AlTs</label>
+                <mat-form-field class="select-field">
+                    <mat-select [(value)]="altsSelected">
+                        @for (env of envOptions; track env) {
+                        <mat-option [value]="env.value">{{env.viewValue}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn saveBtn">Save</button>
+    <button type="button" class="btn cancelBtn" (click)="activeModal.close()">Close</button>
+</div>
