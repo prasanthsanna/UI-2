@@ -68,7 +68,7 @@ const PLATFORM_DATA: platformElement[] = [
 @Component({
   selector: 'app-platform-details',
   templateUrl: './platform-details.component.html',
-  styleUrls: ['./platform-details.component.scss'],
+  styleUrls: ['./platform-details.component.css'],
 })
 export class PlatformDetailsComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'code', 'environments', 'alts'];
