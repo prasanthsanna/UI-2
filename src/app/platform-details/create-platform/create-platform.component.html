@@ -1,8 +1,5 @@
-<div class="modal-header">
-    <h4 class="modal-title"> Create {{ title }} Platforms </h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
-</div>
-<div class="modal-body">
+<h1 mat-dialog-title>Create {{ title }} Platforms</h1>
+<div mat-dialog-content>
     <div class="row m-auto">
         <div class="col-8">
             <div class="form-group">
@@ -16,28 +13,27 @@
             <div class="form-group">
                 <label>Environments</label>
                 <mat-form-field class="select-field">
-                    <mat-select [(value)]="envSelected">
-                        @for (env of envOptions; track env) {
-                        <mat-option [value]="env.value">{{env.viewValue}}</mat-option>
-                        }
+                    <mat-select [(ngModel)]="envSelected" name="env">
+                        <mat-option *ngFor="let env of envOptions" [value]="env.value">
+                            {{env.viewValue}}
+                        </mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div class="form-group">
                 <label>AlTs</label>
                 <mat-form-field class="select-field">
-                    <mat-select [(value)]="altsSelected">
-                        @for (env of envOptions; track env) {
-                        <mat-option [value]="env.value">{{env.viewValue}}</mat-option>
-                        }
+                    <mat-select [(ngModel)]="altsSelected" name="env">
+                        <mat-option *ngFor="let env of envOptions" [value]="env.value">
+                            {{env.viewValue}}
+                        </mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
         </div>
     </div>
-
 </div>
-<div class="modal-footer">
-    <button type="button" class="btn saveBtn">Save</button>
-    <button type="button" class="btn cancelBtn" (click)="activeModal.close()">Close</button>
-</div>
+<mat-dialog-actions align="center">
+    <button class="cmnBtn saveBtn" mat-dialog-close>Save</button>
+    <button class="cmnBtn cancelBtn" mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

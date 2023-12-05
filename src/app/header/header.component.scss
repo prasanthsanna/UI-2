@@ -11,17 +11,14 @@
 .logoTextx {
   color: #fff;
   font-weight: 700;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 
-.logout {
+.welcomeText {
   justify-content: end;
   align-items: center;
   display: flex;
-}
-
-.logout a {
-  font-size: 14px;
-  color: white;
 }
 
 .headTop {

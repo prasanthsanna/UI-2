@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import * as CONFIG from './config.const';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { DashboardComponent } from './etp/dashboard/dashboard/dashboard.component';
-import { PlatformDetailsComponent } from './etp/platforms/platform-details/platform-details.component';
-
-const prefix = CONFIG.apiPrefix;
+import { AuthHandlerComponent } from './auth-handler/auth-handler.component';
+import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
+import { PlatformDetailsComponent } from './platform-details/platform-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: prefix + '/dashboard', pathMatch: 'full' },
-  { path: prefix, redirectTo: prefix + '/dashboard', pathMatch: 'full' },
-  { path: prefix + '/dashboard', component: DashboardComponent },
-  {
-    path: prefix + '/dashboard',
-    loadChildren: () => import('./etp/etp.module').then((m) => m.EtpModule),
-  },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'auth-handler', component: AuthHandlerComponent },
+  { path: 'dashboard', component: DashboardMainComponent },
+  { path: 'platform-details', component: PlatformDetailsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

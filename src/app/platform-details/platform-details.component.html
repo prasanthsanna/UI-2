@@ -1,0 +1,64 @@
+<div class="row m-auto cmnBox">
+    <div class="col-md-7 headingTab">
+        <h2>Platform Details</h2>
+    </div>
+    <button class="cmnBtn addWhiteIcon ms-auto" (click)="openPlatformsModal('New')">Create Platforms</button>
+</div>
+
+<div class="clearRow mb-3"></div>
+
+<div class="row m-auto summeryContainer">
+    <div class="col-md-4 ps-0">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>Platforms</h3>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>Environments</h3>
+        </div>
+    </div>
+
+    <div class="col-md-4 pe-0">
+        <div class="summeryMain">
+            <h2>20</h2>
+            <h3>AIT's</h3>
+        </div>
+    </div>
+</div>
+<div class="clearRow mb-3"></div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name"> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="code">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Code"> Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="environments">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Environments">
+                Environments </th>
+            <td mat-cell *matCellDef="let element"> {{element.environments}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="alts">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Alts"> Alts </th>
+            <td mat-cell *matCellDef="let element"> {{element.alts}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of Platform elements">
+    </mat-paginator>
+</div>

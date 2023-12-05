@@ -1,14 +1,13 @@
-import { Component, inject, Input } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-create-platform',
   templateUrl: './create-platform.component.html',
-  styleUrl: './create-platform.component.scss',
+  styleUrls: ['./create-platform.component.scss'],
 })
 export class CreatePlatformComponent {
-  activeModal = inject(NgbActiveModal);
   @Input() title: any;
+  selectedValue = '';
   envSelected = '';
   altsSelected = '';
   envOptions = [
