@@ -18,3 +18,9 @@
   color: #0080fe;
   border-color: #0080fe;
 }
+
+@media all and (max-width: 768px) {
+  .menuBg {
+    height: auto;
+  }
+}

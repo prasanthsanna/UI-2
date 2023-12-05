@@ -1,0 +1,14 @@
+.headingTab {
+  display: flex;
+  align-items: center;
+}
+
+.cmnBtn {
+  width: auto;
+}
+
+:host ::ng-deep .mat-mdc-table thead th {
+  background-color: #d4e4f3;
+  color: #0080fe;
+  font-weight: bold;
+}
