@@ -1,11 +1,13 @@
 .headerBg {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: #0080fe;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(153, 167, 180, .0588235294);
+  background: #fff;
 }
 
 .logo {
   width: 50%;
+  cursor: pointer;
 }
 
 .logoTextx {
@@ -30,7 +32,7 @@
 
 .profileIcon {
   padding-left: 35px !important;
-  color: rgba(255, 255, 255, 1) !important;
+  color: #000 !important;
   line-height: 40px;
   position: relative;
 }
@@ -42,9 +44,16 @@
   top: 5px;
   left: 0;
   content: "";
-  background: url(/assets/images/profile.png) no-repeat;
+  background: url(/assets/images/profile.svg) no-repeat;
+  background-size: cover;
 }
 
 .profileIcon:after {
   display: none;
+}
+
+.notifyIcon {
+  width: 25px;
+  cursor: pointer;
+  margin-left: 8px;
 }
