@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
   line-height: 1.45em;
   font-weight: 400;
   color: #797979;
-  background: #e8edf2;
+  background: #fafaff;
 }
 
 .clearRow {
@@ -26,11 +27,12 @@ body {
 }
 
 .cmnBox {
-  box-shadow: 0 2px 4px #e0e0e0;
-  border-radius: 5px;
+  /* box-shadow: 0 2px 4px #e0e0e0; */
+  border-radius: 12px;
   padding: 20px 10px;
   background: #fff;
   position: relative;
+  border: 1px solid #e1e7f1
 }
 
 .cmnBox h2 {
@@ -40,26 +42,29 @@ body {
 }
 
 .summeryMain {
-  box-shadow: 0 2px 4px #e0e0e0;
+  /* box-shadow: 0 2px 4px #e0e0e0; */
   margin-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 12px;
   width: 100%;
   display: inline-block;
-  padding: 25px 20px 20px 25px;
+  padding: 30px 10px;
   position: relative;
   background: #fff;
   text-align: center;
+  border: 1px solid #e1e7f1;
 }
 
 .summeryMain h2 {
   font-size: 22px;
+  color: #3b475d;
   font-weight: 600;
   margin-bottom: 0em;
 }
 
 .summeryMain h3 {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 16px;
+  color: #3b475d;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -67,8 +72,10 @@ body {
 .summeryMain p {
   margin-bottom: 0;
   font-size: 10px;
+  color: #3b475d;
   line-height: 13px;
 }
+
 @media all and (max-width: 768px) {
   .summeryContainer {
     .col-md-4 {
@@ -80,21 +87,20 @@ body {
 
 .cmnBtn {
   margin: 0px 6px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 9px 20px;
   font-size: 14px;
   line-height: 1.5rem;
   border: #f2f2f2;
-  cursor: pointer;
-  background: #0080fe;
+  background: #0080ff;
   color: #fff;
-  height: 43px;
+  height: 45px;
+  transition: .3s;
+  min-width: 120px;
 }
 
 .cmnBtn:hover {
-  background: #dddddd;
-  border: #dddddd;
-  color: #000;
+  opacity: .5 !important;
 }
 
 .cmnBtn:focus,
@@ -107,7 +113,7 @@ select {
 .addIcon,
 .addWhiteIcon {
   position: relative;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 .addIcon:before {
@@ -122,28 +128,34 @@ select {
 }
 
 .addWhiteIcon:before {
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   position: absolute;
-  top: 15px;
+  top: 13px;
   left: 10px;
   content: "";
-  background: url(/assets/images/plus-white-icon.svg) no-repeat;
+  background: url(/assets/images/plus-icon.svg) no-repeat;
   background-size: cover;
 }
 
-.saveBtn,
+.saveBtn {
+  background: #0080ff !important;
+  color: #fff !important;
+}
+
 .cmnBtn:hover.saveBtn {
-  background: #0080fe !important;
+  opacity: .5 !important;
+  background: #0080ff !important;
   color: #fff !important;
 }
 
 .cancelBtn,
 .cmnBtn:hover.cancelBtn {
   background: #fff;
-  border: 1px solid #0080fe !important;
-  color: #0080fe !important;
+  border: 1px solid #0080ff !important;
+  color: #0080ff !important;
 }
+
 .form-group {
   margin-bottom: 2rem;
   display: flex;

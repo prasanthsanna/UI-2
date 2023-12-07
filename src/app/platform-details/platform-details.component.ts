@@ -10,6 +10,7 @@ import { CreatePlatformComponent } from './create-platform/create-platform.compo
 export interface platformElement {
   name: string;
   code: number;
+  visibility: number;
   environments: string;
   alts: string;
 }
@@ -18,48 +19,56 @@ const PLATFORM_DATA: platformElement[] = [
   {
     name: 'Name 1',
     code: 100,
+    visibility: 100,
     environments: 'environments 1',
     alts: 'alts 1',
   },
   {
     name: 'Name 2',
     code: 101,
+    visibility: 101,
     environments: 'environments 2',
     alts: 'alts 2',
   },
   {
     name: 'Name 1',
     code: 100,
+    visibility: 100,
     environments: 'environments 1',
     alts: 'alts 1',
   },
   {
     name: 'Name 2',
     code: 101,
+    visibility: 101,
     environments: 'environments 2',
     alts: 'alts 2',
   },
   {
     name: 'Name 1',
     code: 100,
+    visibility: 100,
     environments: 'environments 1',
     alts: 'alts 1',
   },
   {
     name: 'Name 2',
     code: 101,
+    visibility: 101,
     environments: 'environments 2',
     alts: 'alts 2',
   },
   {
     name: 'Name 1',
     code: 100,
+    visibility: 100,
     environments: 'environments 1',
     alts: 'alts 1',
   },
   {
     name: 'Name 2',
     code: 101,
+    visibility: 101,
     environments: 'environments 2',
     alts: 'alts 2',
   },
@@ -71,7 +80,13 @@ const PLATFORM_DATA: platformElement[] = [
   styleUrls: ['./platform-details.component.css'],
 })
 export class PlatformDetailsComponent implements AfterViewInit {
-  displayedColumns: string[] = ['name', 'code', 'environments', 'alts'];
+  displayedColumns: string[] = [
+    'name',
+    'code',
+    'visibility',
+    'environments',
+    'alts',
+  ];
   dataSource = new MatTableDataSource<platformElement>(PLATFORM_DATA);
 
   constructor(
