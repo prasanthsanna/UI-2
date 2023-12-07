@@ -19,6 +19,10 @@ body {
   background: #fafaff;
 }
 
+.contentArea {
+  padding: 4rem 2rem 0 3.5rem;
+}
+
 .clearRow {
   clear: both;
   display: block;
@@ -46,12 +50,39 @@ body {
   margin-bottom: 15px;
   border-radius: 12px;
   width: 100%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   padding: 30px 10px;
-  position: relative;
+  padding-left: 100px;
   background: #fff;
-  text-align: center;
   border: 1px solid #e1e7f1;
+  position: relative;
+}
+
+.summeryMain:before {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  content: "";
+  background-size: 75% 100% !important;
+}
+
+.eyeIcon:before {
+  top: 35px;
+  left: 25px;
+  background: url(/assets/images/eye-icon.svg) no-repeat;
+}
+
+.connectionIcon:before {
+  top: 35px;
+  left: 25px;
+  background: url(/assets/images/connections.svg) no-repeat;
+}
+
+.messageIcon:before {
+  top: 35px;
+  left: 25px;
+  background: url(/assets/images/message.svg) no-repeat;
 }
 
 .summeryMain h2 {
