@@ -10,8 +10,10 @@
   cursor: pointer;
 }
 
-.logoTextx {
-  color: #fff;
+.logoText {
+  font-size: 3rem;
+  letter-spacing: 6px;
+  color: #0080ff;
   font-weight: 700;
   margin-bottom: 0;
   cursor: pointer;
