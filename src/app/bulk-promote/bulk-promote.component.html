@@ -1,0 +1,90 @@
+<div class="row m-auto cmnBox">
+    <div class="col-md-7 headingTab">
+        <h2>Bulk Promote</h2>
+    </div>
+
+
+    <div class="clearRow mb-4"></div>
+
+    <div class="col-md-12 dropDownSection">
+        <div class="col-md-3">
+            <mat-form-field class="select-field">
+                <mat-label>Organization</mat-label>
+                <mat-select [(ngModel)]="organizationSelected" name="org">
+                    <mat-option *ngFor="let org of organizationOptions" [value]="org.value">
+                        {{org.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3">
+            <mat-form-field class="select-field">
+                <mat-label>AIT</mat-label>
+                <mat-select [(ngModel)]="aitSelected" name="ait">
+                    <mat-option *ngFor="let ait of aitOptions" [value]="ait.value">
+                        {{ait.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3">
+            <mat-form-field class="select-field">
+                <mat-label>Status</mat-label>
+                <mat-select [(ngModel)]="statusSelected" name="status">
+                    <mat-option *ngFor="let status of statusOptions" [value]="status.value">
+                        {{status.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3 d-flex">
+            <button class="cmnBtn ms-auto">Promote</button>
+        </div>
+    </div>
+</div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+
+        <ng-container matColumnDef="api">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by API">API
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.api}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">Name
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="organization">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Organization">
+                Organization</th>
+            <td mat-cell *matCellDef="let element"> {{element.organization}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ait">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by AIT"> AIT </th>
+            <td mat-cell *matCellDef="let element"> {{element.ait}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Status">
+                Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="catlog">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Catlog">
+                Catlog </th>
+            <td mat-cell *matCellDef="let element"> {{element.catlog}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of Platform elements">
+    </mat-paginator>
+</div>
