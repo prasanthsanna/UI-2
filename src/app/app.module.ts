@@ -21,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { PlatformDetailsComponent } from './platform-details/platform-details.component';
 import { CreatePlatformComponent } from './platform-details/create-platform/create-platform.component';
+import { BulkPromoteComponent } from './bulk-promote/bulk-promote.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreatePlatformComponent } from './platform-details/create-platform/crea
     MenuBarComponent,
     PlatformDetailsComponent,
     CreatePlatformComponent,
+    BulkPromoteComponent,
   ],
   imports: [
     BrowserModule,

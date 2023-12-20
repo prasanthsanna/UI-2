@@ -15,4 +15,10 @@ export const defaultGeneralMenu = [
     iconUrl: imageAssetPrefix + 'campaign.svg',
     itemId: 'gm2',
   },
+  {
+    itemName: 'Bulk Promote',
+    itemURL: '/bulk-promote',
+    iconUrl: imageAssetPrefix + 'campaign.svg',
+    itemId: 'gm2',
+  },
 ];
