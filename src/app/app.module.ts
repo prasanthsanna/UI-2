@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 //components
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { BulkPromoteComponent } from './bulk-promote/bulk-promote.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
