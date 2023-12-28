@@ -4,7 +4,6 @@
 }
 
 .menuList {
-  font-size: 1rem;
   color: black;
   cursor: pointer;
   border-radius: 0 80px 80px 0;
@@ -21,7 +20,7 @@
 
 .menuList:hover,
 .menuList.active {
-  color: #0080ff;
+  color: #000;
   border-color: #0080ff;
   background-color: #dcecf5;
 }

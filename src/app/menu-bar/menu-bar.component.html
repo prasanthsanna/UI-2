@@ -1,7 +1,7 @@
 <div class="row menuBg">
     <div class="col-md-12 p-0">
         <ng-container *ngFor="let menuItem of filteredGeneralMenu; let i = index">
-            <div class="menuList" routerLinkActive="active" routerLink={{menuItem.itemURL}}>
+            <div role="listbox" class="menuList" routerLinkActive="active" routerLink={{menuItem.itemURL}}>
                 <img class="menuIcon" src={{menuItem.iconUrl}} alt="user">
                 {{menuItem.itemName}}
             </div>

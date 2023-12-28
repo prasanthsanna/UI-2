@@ -100,6 +100,7 @@ export class PlatformDetailsComponent implements AfterViewInit {
   openPlatformsModal(title: any) {
     const modalRef = this.dialog.open(CreatePlatformComponent, {
       width: '1000px',
+      ariaModal: true,
     });
     modalRef.componentInstance.title = title;
   }

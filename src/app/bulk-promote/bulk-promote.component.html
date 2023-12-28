@@ -10,8 +10,8 @@
         <div class="col-md-2">
             <mat-form-field class="select-field">
                 <mat-label>Organization</mat-label>
-                <mat-select [(ngModel)]="organizationSelected" name="org">
-                    <mat-option *ngFor="let org of organizationOptions" [value]="org.value">
+                <mat-select [(ngModel)]="organizationSelected" name="org" aria-controls="id + '-panel'" id="org">
+                    <mat-option role="option" *ngFor="let org of organizationOptions" [value]="org.value">
                         {{org.viewValue}}
                     </mat-option>
                 </mat-select>
@@ -20,7 +20,7 @@
         <div class="col-md-2">
             <mat-form-field class="select-field">
                 <mat-label>AIT</mat-label>
-                <mat-select [(ngModel)]="aitSelected" name="ait">
+                <mat-select [(ngModel)]="aitSelected" name="ait" aria-controls="id + '-panel'" id="ait">
                     <mat-option *ngFor="let ait of aitOptions" [value]="ait.value">
                         {{ait.viewValue}}
                     </mat-option>

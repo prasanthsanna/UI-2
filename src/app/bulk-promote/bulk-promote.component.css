@@ -8,8 +8,8 @@
 }
 
 :host ::ng-deep .mat-mdc-table thead th {
-    background-color: #d4e4f3;
-    color: #0080ff;
+    background-color: #ebedee;
+    color: #0a5bab;
     font-weight: bold;
 }
 

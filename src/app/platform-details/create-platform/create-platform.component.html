@@ -1,31 +1,33 @@
-<h1 mat-dialog-title>Create {{ title }} Platforms</h1>
+<h3 role="heading" aria-level="3" mat-dialog-title>Create {{ title }} Platforms</h3>
 <div mat-dialog-content>
     <div class="row m-auto">
         <div class="col-8">
             <div class="form-group">
                 <label>Platform Code</label>
-                <input type="text" class="form-control" placeholder="Enter Platform Code" />
+                <input type="text" aria-label="Platform Code" class="form-control" autofocus aria-hidden="false" />
             </div>
             <div class="form-group">
                 <label>Platform Name</label>
-                <input type="text" class="form-control" placeholder="Enter Platform Name" />
+                <input type="text" aria-label="Platform Name" class="form-control" aria-hidden="false" />
             </div>
             <div class="form-group">
-                <label>Environments</label>
+                <label for="Environments">Environments</label>
                 <mat-form-field class="select-field">
-                    <mat-select [(ngModel)]="envSelected" name="env">
-                        <mat-option *ngFor="let env of envOptions" [value]="env.value">
+                    <mat-select [(ngModel)]="envSelected" name="env" id="env" aria-controls="env-panel"
+                        title="Environments">
+                        <mat-option role="option" *ngFor="let env of envOptions" [value]="env.value">
                             {{env.viewValue}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div class="form-group">
-                <label>AlTs</label>
+                <label for="AlTs">AlTs</label>
                 <mat-form-field class="select-field">
-                    <mat-select [(ngModel)]="altsSelected" name="env">
-                        <mat-option *ngFor="let env of envOptions" [value]="env.value">
-                            {{env.viewValue}}
+                    <mat-select [(ngModel)]="altsSelected" name="alts" id="alts" aria-controls="alts-panel"
+                        title="AlTs">
+                        <mat-option role="option" *ngFor="let alts of envOptions" [value]="alts.value">
+                            {{alts.viewValue}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>

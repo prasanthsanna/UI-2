@@ -40,9 +40,10 @@ body {
 }
 
 .cmnBox h2 {
-  font-weight: 600;
-  font-size: 18px;
+  /* font-weight: 600;
+  font-size: 20px; */
   margin-bottom: 0;
+  color: #000;
 }
 
 .summeryMain {
@@ -123,7 +124,7 @@ body {
   font-size: 14px;
   line-height: 1.5rem;
   border: #f2f2f2;
-  background: #0080ff;
+  background: #0b5bab;
   color: #fff;
   height: 45px;
   transition: .3s;
@@ -170,21 +171,21 @@ select {
 }
 
 .saveBtn {
-  background: #0080ff !important;
+  background: #0b5bab !important;
   color: #fff !important;
 }
 
 .cmnBtn:hover.saveBtn {
   opacity: .5 !important;
-  background: #0080ff !important;
+  background: #0b5bab !important;
   color: #fff !important;
 }
 
 .cancelBtn,
 .cmnBtn:hover.cancelBtn {
   background: #fff;
-  border: 1px solid #0080ff !important;
-  color: #0080ff !important;
+  border: 1px solid #0b5bab !important;
+  color: #0b5bab !important;
 }
 
 .form-group {
