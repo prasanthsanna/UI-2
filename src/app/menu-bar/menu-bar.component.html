@@ -1,11 +1,65 @@
 <div class="row menuBg">
     <div class="col-md-12 p-0">
-        <ng-container *ngFor="let menuItem of filteredGeneralMenu; let i = index">
+
+
+        <mat-accordion displayMode="flat">
+            <mat-expansion-panel class="tab_pannel" hideToggle>
+                <mat-expansion-panel-header class="menuList">
+                    <mat-panel-title routerLinkActive="active" routerLink="/dashboard">
+                        Dashboard
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel class="tab_pannel">
+                <mat-expansion-panel-header class="menuList">
+                    <mat-panel-title routerLinkActive="active">
+                        Platforms
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="card-body">
+                    <div class="subMenu" routerLinkActive="active" routerLink="/platform-details">
+                        Sub Dashboard
+                    </div>
+                </div>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel class="tab_pannel" hideToggle>
+                <mat-expansion-panel-header class="menuList">
+                    <mat-panel-title routerLinkActive="active" routerLink="/bulk-promote">
+                        bulk-promote
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <!-- <mat-accordion displayMode="flat">
+            <mat-expansion-panel class="tab_pannel" *ngFor="let menuItem of filteredGeneralMenu; let i = index">
+                <mat-expansion-panel-header class="menuList">
+                    <mat-panel-title role="listbox" routerLinkActive="active" routerLink={{menuItem.itemURL}}>
+                        <img class="menuIcon" src={{menuItem.iconUrl}} alt="user">
+                        {{menuItem.itemName}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="card-body">
+                    <div *ngFor="let subItem of menuItem.subItem; let i = index">
+                        <div class="subMenu" routerLinkActive="active" routerLink={{subItem.subItemURL}}>
+                            {{subItem.subItemName}}</div>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion> -->
+
+
+
+        <!-- <ng-container *ngFor="let menuItem of filteredGeneralMenu; let i = index">
             <div role="listbox" class="menuList" routerLinkActive="active" routerLink={{menuItem.itemURL}}>
                 <img class="menuIcon" src={{menuItem.iconUrl}} alt="user">
                 {{menuItem.itemName}}
             </div>
-        </ng-container>
+        </ng-container> -->
+
+
     </div>
 
 </div>
