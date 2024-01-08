@@ -11,6 +11,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ToastrModule } from 'ngx-toastr';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 //components
 import { AppComponent } from './app.component';
@@ -50,6 +53,9 @@ import { BulkPromoteComponent } from './bulk-promote/bulk-promote.component';
     MatSelectModule,
     MatInputModule,
     MatCheckboxModule,
+    MatProgressSpinnerModule,
+    ToastrModule.forRoot(),
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
